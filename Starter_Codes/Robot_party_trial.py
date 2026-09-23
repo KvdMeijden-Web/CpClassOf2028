@@ -68,15 +68,13 @@ def show_robot(robot):
 
 def search_robot():
     target_id = int(input("Enter Robot ID: "))
-    search_history.append(target_id)
 
-    robot, comparisons = binary_search_robot(target_id)
+    robot = binary_search_robot(target_id)
 
     if robot is not None:
-        show_robot(robot, comparisons)
+        show_robot(robot)
     else:
         print("Robot", target_id, "was not found.")
-        print("Search completed after", comparisons, "comparisons.")
 
 
 def show_ready_robots():
@@ -84,9 +82,7 @@ def show_ready_robots():
     # TODO: Use a for loop to display robots that are AVAILABLE
     #       and have a battery level of at least 70%
 
-
-running = True
-while running:
+def start_menu():
     print("\n=================================")
     print("   RESCUE ROBOT CONTROL SYSTEM")
     print("=================================")
@@ -97,4 +93,15 @@ while running:
     print("5 - deplay robot by ID")
     print("6 - Exit")
     choice = input("select option:4")
+    return choice
+    
 
+running = True
+while running:
+    choice = start_menu()
+    if choice == 1:
+        print("searching....")
+    elif choice == 2:
+        print ("exit program")
+        running = False
+    
