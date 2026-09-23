@@ -21,7 +21,7 @@ robots = [
     [231, "Atlas-16", "Sector E", 42, "CHARGING"]
 ]
 
-search_history = []
+
 
 
 def show_all_robots():
