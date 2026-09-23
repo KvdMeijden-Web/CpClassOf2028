@@ -26,16 +26,16 @@ def show_all_robots():
 
 
 def linear_search_robot(target_id):
-    comparisons = 0
+    
 
     # TODO: use a for loop to match each entry with a target_ID.
     # TODO: add +1 to the counter of comparisons.
     
-    return None, comparisons
+    return None
 def binary_search_robot(target_id):
     low = 0
     high = len(robots) - 1
-    comparisons = 0
+    
 
     # TODO: Use a while loop that continues while low <= high
     # TODO: Calculate the middle index
@@ -46,7 +46,7 @@ def binary_search_robot(target_id):
     # TODO: If target_id > middle ID, move low above middle
     # TODO: If target_id < middle ID, move high below middle
 
-    return None, comparisons
+    return None
 
 
 def show_robot(robot):
@@ -66,13 +66,13 @@ def show_robot(robot):
 def search_robot():
     target_id = int(input("Enter Robot ID: "))
     
-    robot, comparisons = binary_search_robot(target_id)
+    robot = binary_search_robot(target_id)
 
     if robot is not None:
-        show_robot(robot, comparisons)
+        show_robot(robot)
     else:
         print("Robot", target_id, "was not found.")
-        print("Search completed after", comparisons, "comparisons.")
+        
 
 
 def show_ready_robots():
@@ -94,3 +94,5 @@ while running:
     print("6 - Exit")
     choice = input("select option:")
 
+    if choice == 1:
+    
