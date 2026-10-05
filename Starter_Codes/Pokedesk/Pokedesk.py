@@ -8,13 +8,15 @@ def open_file():
         pokemon_data = json.load(file)
         return pokemon_data
 
+
+
 def search_type(pokemon_data):
     search_type = input("Enter Pokémon type: ").capitalize()
-    print(f"\nPokémon with type {search_type}:")
+    print("\nPokémon with type ="+ search_type+":")
     for pokemon in pokemon_data:
         if search_type in pokemon["type"]:
             print(pokemon["name"]["english"])
-            print(pokemon["description"])
+           
 
 pokedesk = open_file()
 search_type(pokedesk)
