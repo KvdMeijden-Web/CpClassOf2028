@@ -1,23 +1,35 @@
 import tkinter as tk
 
+def toggle_text():
+    if label.cget("text") == "Hello":
+        label.config(text="Goodbye")
+    else:
+        label.config(text="Hello")
+
 root = tk.Tk()
-root.title("Basic Tkinter")
+root.title("Hello Goodbye")
 
 # Canvas
-canvas = tk.Canvas(root, width=300, height=200, bg="white")
+canvas = tk.Canvas(root, width=900, height=600, bg="pink")
 canvas.pack()
- 
-# Label
-label = tk.Label(root, text="Hello")
-label.pack()
-#label.place(x=50, y=50)
+
+# # Label
+label = tk.Label(canvas, text="Hello")
+
+label.config(anchor='center',
+             font=('Ariel',32),
+             bg="pink")
+label.place(x=400, y=20)
+#button
+button = tk.Button(canvas,text="clickme!",command=toggle_text)
+button.config(anchor='center',
+             font=('Ariel',32),
+             bg="pink")
+button.place(x=350, y=100)
 
 root.mainloop()
-# def toggle_text():
-#     if label.cget("text") == "Hello":
-#         label.config(text="Goodbye")
-#     else:
-#         label.config(text="Hello")
+
+
 
 
 # # Label
