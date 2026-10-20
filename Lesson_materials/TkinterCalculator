@@ -1,5 +1,4 @@
 import tkinter as tk
-
 def add():
     total = float(firstNumber.get()) + float(secondNumber.get())
     Result =result.config(text=total)
@@ -7,13 +6,13 @@ def add():
 # Create TK window
 root = tk.Tk()
 root.title("Calculator")
-
 # Add widgets in the screen
 # - Header label
 header = tk.Label(root, text="Calculator",font=("ariel",23))
 header.pack()
 # - Entry1 entry
 firstNumber = tk.Entry(root,font=("ariel",23))
+firstNumber.insert(0,0)
 firstNumber.pack()
 # - Entry2 entry
 secondNumber = tk.Entry(root,font=("ariel",23))
