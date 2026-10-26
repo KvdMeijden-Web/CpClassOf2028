@@ -1,4 +1,8 @@
+# a=False
+# b=True
 
+# if not a == b:
+#     print ("good")
 
 #1: Identify Variables (or conditions) and assign them boolean values
 #2: In you noteboot, write the logical expressions using and, or, and not
@@ -6,12 +10,22 @@
 # 1.
 # Create a program that checks if it is sunny and you have sunglasses.
 # Output should be True only if both are true.
-if S and 
-
-
+Sunny = True
+Sunglasses = True
+if Sunny and Sunglasses:
+    outside = True
+else:
+    outside = False
+print(outside)
 # 2.
 # Check if you have homework or you have a project due.
 # Output should be True if at least one is true.
+umbrella = True
+rain = True
+if (umbrella and rain) or (not umbrella and not rain):
+    Print()
+
+
 
 # 3.
 # Check if you are not tired.
@@ -22,10 +36,9 @@ if S and
 # Write this as: if raining then umbrella, which is (not raining) or umbrella.
 
 # 5.
-
 # “It is weekend if and only if you don’t have school.”
 # Translate to (weekend and not school) or (not weekend and school == False).
-
+# if w == not s:
 # 6. 
 # “You can play video games if exactly one of these is true: it’s weekend or you finished homework.”
 

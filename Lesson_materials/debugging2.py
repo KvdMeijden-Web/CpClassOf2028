@@ -14,7 +14,7 @@ def average_of_passed(marks):
     for score in marks:
         if score >= 50:
             total += score
-        count += 1  
+            count += 1  
 
     return total / count
 
