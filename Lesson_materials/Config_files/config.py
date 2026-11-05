@@ -1,0 +1,7 @@
+# Game configuration
+GAME_TITLE = "Monster Arena"
+PLAYER_HEALTH = 100
+ENEMY_HEALTH = 50
+PLAYER_DAMAGE = 15
+ENEMY_DAMAGE = 10
+DIFFICULTY = "Normal"
