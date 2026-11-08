@@ -23,6 +23,16 @@ robots = [
 
 def show_all_robots():
     print("\n--- ROBOT DATABASE ---")
+<<<<<<< HEAD
+    x=0
+    for i in robots:
+        print(robots[x])
+        x+=1
+        if i==len(robots):
+            x=0
+    return None
+def binary_search_robot(robots, target_id):
+=======
 
 
 def linear_search_robot(target_id):
@@ -33,9 +43,18 @@ def linear_search_robot(target_id):
     
     return None, comparisons
 def binary_search_robot(target_id):
+>>>>>>> 8897c7249f78120c8be6f1019898621cb859624d
     low = 0
     high = len(robots) - 1
-    comparisons = 0
+    while low<=high:
+        mid=low+(high-low)//2
+        print(robots[mid][0])
+        if robots[mid][0] == target_id:
+            return mid
+        elif robots[mid][0]<=target_id:
+            low = mid+1
+        elif robots[mid][0]>=target_id:
+            high=mid-1
 
     # TODO: Use a while loop that continues while low <= high
     # TODO: Calculate the middle index
@@ -46,41 +65,74 @@ def binary_search_robot(target_id):
     # TODO: If target_id > middle ID, move low above middle
     # TODO: If target_id < middle ID, move high below middle
 
-    return None, comparisons
+    return -1
 
 
 def show_robot(robot):
     print("\n-----------------------------")
     print("ROBOT FOUND")
     print("-----------------------------")
+<<<<<<< HEAD
+    print("ID:      ", robots[robot][0])
+    print("Name:    ", robots[robot][1])
+    print("Location:", robots[robot][2])
+    print("Battery: ", str(robots[robot][3]) + "%")
+    print("Status:  ", robots[robot][4])
+    if robots[robot][3] > 70:
+        print('battery is GOOD')
+    elif robots[robot][3] > 50:
+        print('battery is LOW')
+    elif robots[robot][3] < 50:
+        print('CRITICAL battery life')
+    if robots[robot][4] == 'AVAILABLE':
+        print('robot is ready for deployment')
+    elif robots[robot][4] == 'BUSY':
+        print('robot is BUSY')
+    elif robots[robot][4] == 'CHARGING':
+        if robots[robot][3] >=70:
+            print('robot is ready for deployment')
+        else: 
+            print('robot is charging')
+=======
     print("ID:      ", robot[0])
     print("Name:    ", robot[1])
     print("Location:", robot[2])
     print("Battery: ", str(robot[3]) + "%")
     print("Status:  ", robot[4])
+>>>>>>> 8897c7249f78120c8be6f1019898621cb859624d
 
-    # TODO CHALLENGE: classify battery as GOOD / LOW / CRITICAL
-    # TODO CHALLENGE: say whether the robot is ready to deploy
+    # TODO CHALLENGE: classify battery as GOOD / LOW / CRITICAL +
+    # TODO CHALLENGE: say whether the robot is ready to deploy +
 
 
 def search_robot():
     target_id = int(input("Enter Robot ID: "))
     
+<<<<<<< HEAD
+    robot = binary_search_robot(robots, target_id)
+
+    if robot != -1:
+        show_robot(robot)
+=======
     robot, comparisons = binary_search_robot(target_id)
 
     if robot is not None:
         show_robot(robot, comparisons)
+>>>>>>> 8897c7249f78120c8be6f1019898621cb859624d
     else:
         print("Robot", target_id, "was not found.")
-        print("Search completed after", comparisons, "comparisons.")
+        
 
 
 def show_ready_robots():
     print("\n--- READY FOR EMERGENCY DEPLOYMENT ---")
-    # TODO: Use a for loop to display robots that are AVAILABLE
-    #       and have a battery level of at least 70%
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 8897c7249f78120c8be6f1019898621cb859624d
 running = True
 while running:
     print("\n=================================")
@@ -92,5 +144,15 @@ while running:
     print("4 - deploy first available robot")
     print("5 - deplay robot by ID")
     print("6 - Exit")
+<<<<<<< HEAD
+    choice = int(input("select option:"))
+=======
     choice = input("select option:")
+>>>>>>> 8897c7249f78120c8be6f1019898621cb859624d
 
+    if choice == 1:
+        search_robot()
+    if choice == 2:
+        show_all_robots()
+    if choice == 6:
+        break
